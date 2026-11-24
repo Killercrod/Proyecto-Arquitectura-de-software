@@ -1,0 +1,83 @@
+.login-modal{
+    // position: relative;
+}
+
+.login-modal-content {
+    position: relative;
+    // position: fixed;
+    // position: relative;
+
+    // background-color: var(--global-modalBackground);
+    // padding: 2rem;
+    // border: 0.05px solid rgba(var(--color-accent-schedule-rgb), 0.2);
+    // border-radçius: 2rem;
+    // padding: 0 2rem;
+    // opacity: 0.8;
+    // width: 70%;
+
+    &_close-btn {
+        // text-align: right;
+        position: absolute;
+        left: 82%;
+        // right: 0rem;
+        // transform: translateX(-100%);
+        top: 2rem;
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        padding: 0.5rem;
+        width: clamp(3rem, 3.5vw, 4rem);
+        height: clamp(3rem, 3.5vw, 4rem);
+        border: 0.5px solid rgba(var(--color-accent-schedule-rgb), 0.2);
+        border-radius: 50%;
+        background: var(--global-tertiaryColor);
+        color: var(--global-WhiteColor);
+
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: color 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            color: var(--color-accent-schedule);
+            transform: rotate(90deg);
+        }
+
+    }
+
+    // &_form{
+
+    // }
+}
+
+// .login-modal{
+//     .close-button {
+//         position: absolute;
+//         top: 2rem;
+//         right: 1.5rem;
+//         z-index: 2;
+
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+        
+//         padding: 0.5rem;
+//         width: clamp(3rem, 3.5vw, 4rem);
+//         height: clamp(3rem, 3.5vw, 4rem);
+//         border: 0.5px solid rgba(var(--color-accent-schedule-rgb), 0.2);
+//         border-radius: 50%;
+//         background: var(--global-tertiaryColor);
+//         color: var(--global-WhiteColor);
+
+//         font-size: 1.5rem;
+//         cursor: pointer;
+//         transition: color 0.2s ease, transform 0.2s ease;
+
+//         &:hover {
+//             color: var(--color-accent-schedule);
+//             transform: rotate(90deg);
+//         }
+//     }
+// }

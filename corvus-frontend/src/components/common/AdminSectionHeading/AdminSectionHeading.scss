@@ -1,0 +1,24 @@
+.administrative-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 1.5rem;
+    // margin-left: 50rem;
+    // align-items: first baseline;
+    // justify-content: center;
+    // width: calc(100% - 20%);
+    position: relative;
+    &::before {
+        // position: absolute;
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--global-WhiteColor);
+        height: clamp(0.02rem, 0.02vw, 0.05rem);
+        opacity: 0.2;
+
+    }
+}

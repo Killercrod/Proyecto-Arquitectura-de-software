@@ -1,0 +1,184 @@
+
+[
+  {
+    "id": 1,
+    "name": "Figura de colección de Gojo Satoru",
+    "price": 120,
+    "description": "Figura de colección de Satoru Gojo de Jujutsu Kaisen.",
+    "quantity": 3,
+    "images": ["/images/gojo-1.webp", "/images/gojo-2.webp"],
+    "category": "Figuras de anime"
+  },
+  {
+    "id": 2,
+    "name": "Llavero de Kuromi",
+    "price": 65,
+    "description": "Llavero decorativo de Kuromi con acabado brillante.",
+    "quantity": 8,
+    "images": ["/images/kuromi-1.webp"],
+    "category": "Llaveros"
+  },
+  {
+    "id": 3,
+    "name": "Peluche de Cinnamoroll",
+    "price": 180,
+    "description": "Peluche suave de Cinnamoroll, ideal para regalar.",
+    "quantity": 2,
+    "images": ["/images/cinnamoroll-1.webp", "/images/cinnamoroll-2.webp"],
+    "category": "Peluches"
+  },
+  {
+    "id": 4,
+    "name": "Set de stickers de anime",
+    "price": 45,
+    "description": "Paquete de stickers con ilustraciones inspiradas en anime.",
+    "quantity": 12,
+    "images": ["/images/stickers-anime.webp"],
+    "category": "Papelería"
+  },
+  {
+    "id": 5,
+    "name": "Figura de Nezuko Kamado",
+    "price": 250,
+    "description": "Figura decorativa de Nezuko Kamado de Kimetsu no Yaiba.",
+    "quantity": 0,
+    "images": ["/images/nezuko-1.webp"],
+    "category": "Figuras de anime"
+  },
+  {
+    "id": 6,
+    "name": "Pin de estrella",
+    "price": 35,
+    "description": "Pin metálico con diseño de estrella para mochilas y bolsos.",
+    "quantity": 6,
+    "images": ["/images/pin-estrella.webp"],
+    "category": "Accesorios"
+  },
+  {
+    "id": 7,
+    "name": "Mini figura de Kirby",
+    "price": 95,
+    "description": "Mini figura coleccionable del personaje Kirby.",
+    "quantity": 4,
+    "images": ["/images/kirby-1.webp"],
+    "category": "Figuras de videojuegos"
+  },
+  {
+    "id": 8,
+    "name": "Pulsera de cuentas pastel",
+    "price": 55,
+    "description": "Pulsera artesanal con cuentas en tonos pastel.",
+    "quantity": 0,
+    "images": ["/images/pulsera-pastel.webp"],
+    "category": "Accesorios"
+  },
+  {
+    "id": 9,
+    "name": "Figura de Tanjiro Kamado",
+    "price": 220,
+    "description": "Figura de Tanjiro con su uniforme de cazador de demonios.",
+    "quantity": 5,
+    "images": ["/images/tanjiro-1.webp"],
+    "category": "Figuras de anime"
+  },
+  {
+    "id": 10,
+    "name": "Llavero de My Melody",
+    "price": 60,
+    "description": "Llavero de My Melody en tonos rosa y blanco.",
+    "quantity": 7,
+    "images": ["/images/my-melody.webp"],
+    "category": "Llaveros"
+  },
+  {
+    "id": 11,
+    "name": "Peluche de Pochacco",
+    "price": 160,
+    "description": "Peluche de Pochacco con textura suave y diseño clásico.",
+    "quantity": 3,
+    "images": ["/images/pochacco.webp"],
+    "category": "Peluches"
+  },
+  {
+    "id": 12,
+    "name": "Set de washi tapes",
+    "price": 75,
+    "description": "Set de cintas decorativas para agendas, cartas y manualidades.",
+    "quantity": 9,
+    "images": ["/images/washi-tapes.webp"],
+    "category": "Papelería"
+  },
+  {
+    "id": 13,
+    "name": "Figura de Luffy",
+    "price": 195,
+    "description": "Figura coleccionable de Monkey D. Luffy de One Piece.",
+    "quantity": 2,
+    "images": ["/images/luffy-1.webp", "/images/luffy-2.webp"],
+    "category": "Figuras de anime"
+  },
+  {
+    "id": 14,
+    "name": "Pin de corazón",
+    "price": 40,
+    "description": "Pin decorativo con forma de corazón para ropa y accesorios.",
+    "quantity": 10,
+    "images": ["/images/pin-corazon.webp"],
+    "category": "Accesorios"
+  },
+  {
+    "id": 15,
+    "name": "Mini figura de Pikachu",
+    "price": 85,
+    "description": "Figura pequeña de Pikachu para coleccionistas.",
+    "quantity": 6,
+    "images": ["/images/pikachu.webp"],
+    "category": "Figuras de videojuegos"
+  },
+  {
+    "id": 16,
+    "name": "Llavero de Totoro",
+    "price": 70,
+    "description": "Llavero inspirado en Totoro de Mi vecino Totoro.",
+    "quantity": 4,
+    "images": ["/images/totoro.webp"],
+    "category": "Llaveros"
+  },
+  {
+    "id": 17,
+    "name": "Peluche de Pompompurin",
+    "price": 175,
+    "description": "Peluche de Pompompurin con su característica boina marrón.",
+    "quantity": 0,
+    "images": ["/images/pompompurin.webp"],
+    "category": "Peluches"
+  },
+  {
+    "id": 18,
+    "name": "Set de notas adhesivas",
+    "price": 50,
+    "description": "Notas adhesivas con diseños kawaii para organizar tus apuntes.",
+    "quantity": 15,
+    "images": ["/images/notas-kawaii.webp"],
+    "category": "Papelería"
+  },
+  {
+    "id": 19,
+    "name": "Figura de Levi Ackerman",
+    "price": 280,
+    "description": "Figura decorativa de Levi Ackerman de Attack on Titan.",
+    "quantity": 1,
+    "images": ["/images/levi.webp"],
+    "category": "Figuras de anime"
+  },
+  {
+    "id": 20,
+    "name": "Collar de luna",
+    "price": 90,
+    "description": "Collar con dije de luna y diseño delicado para uso diario.",
+    "quantity": 5,
+    "images": ["/images/collar-luna.webp"],
+    "category": "Accesorios"
+  }
+]
+

@@ -1,0 +1,11 @@
+.guide-text {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  color: var(--global-primaryColor);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  // opacity: 0.8;
+  font-weight: bold;
+  font-family: var(--textFont_alternative);
+//   color: var(--color-accent);
+}

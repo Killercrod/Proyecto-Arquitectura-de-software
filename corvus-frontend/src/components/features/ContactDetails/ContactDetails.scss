@@ -1,0 +1,70 @@
+.contact-details_layout{
+    margin: 0;
+    width: 50%;
+}
+
+
+// generals
+.contact-details {
+    display: flex;
+    // background-color: wheat;
+    justify-content: space-around;
+    // gap: 50%;
+    // gap: 10rem;
+
+    font-family: var(--textFont_primary);
+    font-size: clamp(0.8rem, 0.8vw, 1.2rem);
+    color: var(--global-WhiteColor);
+
+    .heading {
+        text-transform: uppercase;
+        color: var(--global-primaryColor);
+        font-weight: bold;
+    }
+
+    .contact-options {
+        display: flex;
+        flex-direction: column;
+
+        .contact-type{
+            margin: clamp(0.5rem, 0.8vw, 1rem) 0;
+        }
+    }
+}
+
+// specific to each one
+.social-media {
+    .social-media--link {
+        cursor: pointer;
+        //prop time transition-timing-function: La curva de velocidad del cambio  delay
+        transition: font-size 0.4s ease 0s,
+                    font-weight 0.4s ease 0s;
+
+        &:hover{
+            font-weight: bold;
+            font-size: clamp(0.9rem,1vw,1.3rem);
+            color: var(--color-accent);
+        }
+    }
+}
+
+.contact-forms{
+    .mail{
+        color: var(--global-primaryColor);
+    }
+
+    .schedule {
+        color: var(--color-accent-schedule);
+    }
+}
+
+
+// for phone
+@media (max-width: 600px) {
+
+    .contact-details {
+        gap: 1rem;
+        // justify-content: none;
+        flex-direction: column;
+    }
+}

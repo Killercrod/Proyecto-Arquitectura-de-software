@@ -1,0 +1,55 @@
+:root {
+    // fonts
+    --tittleFont: "Stoke", serif;
+    --emphasisFont:  "Petit Formal Script", cursive;
+    --textFont_primary: "DM Sans", sans-serif;
+    --textFont_alternative: "Capriola", sans-serif;
+
+    // colors
+    --global-primaryColor: #AB7ED9;
+    --global-SecondaryColor: #2C1940;
+    --global-tertiaryColor: #0A080D;
+    --global-WhiteColor: #F7F7F7;
+    --global-grayColor: #808080; //this color was assigned after the front-end for the users (not admins) was built
+    // #9A6CBB
+    --global-modalBackground: #121014;
+    --global-inputform-modal-background: #1A181C;
+
+    --color-accent: #D4ACEA;
+    --color-accent-sidebar: #9A6CBB;
+    --color-accent-secondary: #2C1940;
+    --color-accent-btn: #FFF0FF;
+    --color-accent_alternative: #2C1F5D;
+    --color-accent-schedule: #808080;
+
+    // colors-rgb
+    --global-primaryColor-rgb: 171, 126, 217;
+    --global-SecondaryColor-rgb: 44, 25, 64;
+    --global-tertiaryColor-rgb: 10, 8, 13;
+
+    --color-accent-rgb: 212, 172, 234;
+    --color-accent_alternative-rgb: 44, 31, 93;
+    --color-accent-schedule-rgb: 128, 128, 128;
+    --global-modalBackground-rgb: 18, 16, 20;
+
+
+}
+
+// global settings
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem; /*1 rem = 10px*/
+
+    // temporal. Se debe mover por section
+    background-color: var(--global-tertiaryColor);
+}

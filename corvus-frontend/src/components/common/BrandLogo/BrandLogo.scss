@@ -1,0 +1,50 @@
+.brand-logo_layout {
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    font-family: var(--textFont_primary);
+
+    .logo-container {
+        border: 0.02rem solid var(--global-primaryColor);
+        border-radius: 50%;
+        padding: 1.4rem 1rem;
+
+        max-width: 100%;
+
+        .company-initials {
+            font-weight: 400;
+            margin: 0;
+            color: var(--global-WhiteColor);
+            font-size: clamp(1rem, 1vw, 3rem);
+        }
+    }
+
+    .company-name {
+        // font-weight: ;
+        font-size: clamp(1rem, 1vw, 3rem);
+        color: var(--global-WhiteColor);
+    }
+
+}
+
+// for phone
+@media (max-width: 600px) {
+
+    .brand-logo {
+       .logo-container {
+            // border-radius: 1rem;
+            padding: 1rem;
+        } 
+    }
+    
+}
+
+
+

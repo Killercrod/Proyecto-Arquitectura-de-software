@@ -1,0 +1,17 @@
+// ConfirmDeleteModal.scss
+.confirm {
+  &__message { margin-bottom: 1rem; }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  &__btn {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &--danger { background: #c62828; color: #fff; }
+  }
+}

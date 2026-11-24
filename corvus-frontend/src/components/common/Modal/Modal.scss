@@ -1,0 +1,74 @@
+// .overlay {
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-content: center;
+//     justify-content: center;
+//     align-items: center;
+
+//     background-color: rgba($color: var(--global-modalBackground-rgb), $alpha: 0.8);
+// }
+
+// .modal {
+//     // padding: 16px;
+//     // width: 100%;
+// }
+
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(var(--global-modalBackground-rgb), 0.8);
+
+    z-index: 1000;
+
+    animation: fadeIn 0.25s ease forwards;
+}
+
+.modal {
+    // padding: 16px;
+    // width: 100%;
+
+    animation: modalEnter 0.3s ease forwards;
+}
+
+// Animación del fondo
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// Animación del contenido
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+// Accesibilidad
+@media (prefers-reduced-motion: reduce) {
+    .overlay,
+    .modal {
+        animation-duration: 0.01ms;
+    }
+}

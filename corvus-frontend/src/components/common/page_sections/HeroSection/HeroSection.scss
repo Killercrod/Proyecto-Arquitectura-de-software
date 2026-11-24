@@ -1,0 +1,529 @@
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  min-height: 320px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 78% 48%,
+      rgba(var(--global-SecondaryColor-rgb), 0.45),
+      transparent 45%
+    ),
+    var(--global-tertiaryColor);
+  color: var(--global-WhiteColor);
+
+  &_layout {
+    padding: 35px 7%;
+  }
+
+  &--content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .section-identity {
+    max-width: 510px;
+  }
+
+  .hero-section--heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-identity-text {
+    max-width: 370px;
+    margin: 14px 0 20px;
+    color: var(--color-accent-schedule);
+    font-family: var(--textFont_primary);
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+}
+
+.hero-section {
+  //PLANETA Y SISTEMA ORBITAL
+
+  &--visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    min-height: 480px;
+    overflow: visible;
+  }
+
+  // Resplandor detrás del planeta
+
+  &--glow {
+    position: absolute;
+    width: clamp(260px, 34vw, 440px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    background: radial-gradient(
+      circle,
+      rgba(var(--global-primaryColor-rgb), 0.32),
+      rgba(var(--global-primaryColor-rgb), 0.12) 40%,
+      transparent 70%
+    );
+
+    filter: blur(22px);
+    animation: hero-glow 5s ease-in-out infinite alternate;
+  }
+
+  //planeta
+
+  &--planet {
+    position: relative;
+    z-index: 2;
+
+    width: clamp(180px, 24vw, 325px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    background: radial-gradient(
+      circle at 33% 24%,
+      #f9e6ff 0%,
+      #e5bafa 19%,
+      #c38ce5 43%,
+      #9560bd 70%,
+      #48265e 100%
+    );
+
+    box-shadow:
+      inset -22px -20px 45px rgba(27, 10, 37, 0.4),
+      inset 10px 8px 30px rgba(255, 255, 255, 0.16),
+      0 0 55px rgba(var(--global-primaryColor-rgb), 0.3);
+
+    animation: hero-planet-float 5s ease-in-out infinite;
+  }
+
+  //cráteres
+
+  &--crater {
+    position: absolute;
+    top: 26%;
+    left: 27%;
+
+    width: 14%;
+    height: 8%;
+    border-radius: 50%;
+
+    background: rgba(91, 49, 120, 0.35);
+
+    box-shadow:
+      inset 3px 3px 7px rgba(44, 25, 64, 0.4),
+      2px 2px 8px rgba(255, 255, 255, 0.08);
+
+    transform: rotate(-20deg);
+  }
+
+  &--crater_two {
+    top: 69%;
+    left: 62%;
+    width: 10%;
+    height: 6%;
+    opacity: 0.55;
+    transform: rotate(25deg);
+  }
+
+  &--crater_three {
+    top: 79%;
+    left: 35%;
+    width: 9%;
+    height: 5%;
+    opacity: 0.45;
+    transform: rotate(-12deg);
+  }
+
+  //anillo
+
+  &--ring {
+    position: absolute;
+    z-index: 3;
+
+    top: 50%;
+    left: 50%;
+
+    width: clamp(270px, 38vw, 500px);
+    height: clamp(55px, 8vw, 100px);
+
+    border: 9px solid rgba(232, 204, 250, 0.95);
+    border-right-color: rgba(171, 126, 217, 0.8);
+    border-bottom-color: rgba(115, 69, 150, 0.9);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 15px rgba(219, 176, 250, 0.12);
+
+    transform: translate(-50%, -50%) rotate(-15deg);
+
+    animation: hero-ring-rotate 12s linear infinite;
+  }
+
+  // Órbitas de las lunas
+
+  &--orbit {
+    position: absolute;
+    z-index: 1;
+
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid rgba(203, 160, 231, 0.12);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+    animation: hero-moon-orbit 12s linear infinite;
+
+    &_one {
+      width: clamp(310px, 42vw, 540px);
+      aspect-ratio: 1;
+      animation-duration: 18s;
+    }
+
+    &_two {
+      width: clamp(350px, 46vw, 600px);
+      aspect-ratio: 1;
+      animation-duration: 26s;
+      animation-direction: reverse;
+    }
+
+    &_three {
+      width: clamp(390px, 51vw, 660px);
+      aspect-ratio: 1;
+      animation-duration: 34s;
+    }
+  }
+
+  //lunas
+
+  &--moon {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+
+    background: #d9a5f4;
+
+    box-shadow:
+      0 0 8px rgba(215, 159, 245, 0.8),
+      0 0 18px rgba(215, 159, 245, 0.4);
+
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-section--orbit_two .hero-section--moon {
+    width: 6px;
+    height: 6px;
+    background: #f0d8ff;
+  }
+
+  .hero-section--orbit_three .hero-section--moon {
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border: 2px solid #d9a5f4;
+  }
+
+  // Etiqueta ÓRBITA 24/7
+
+  &--orbit-label {
+    position: absolute;
+    z-index: 4;
+
+    top: 12%;
+    right: 2%;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 12px 18px;
+
+    border: 1px solid rgba(216, 181, 238, 0.16);
+    border-radius: 30px;
+
+    background: rgba(17, 10, 24, 0.75);
+    backdrop-filter: blur(10px);
+
+    color: #c6b4d0;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    animation: hero-label-float 4s ease-in-out infinite;
+  }
+
+  &--status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    background: #c68be9;
+    box-shadow: 0 0 10px #c68be9;
+  }
+
+  // Etiqueta del universo
+
+  &--universe-label {
+    position: absolute;
+    z-index: 4;
+
+    bottom: 13%;
+    left: 2%;
+
+    padding: 13px 19px;
+
+    border: 1px solid rgba(216, 181, 238, 0.16);
+    border-radius: 30px;
+
+    background: rgba(17, 10, 24, 0.75);
+    backdrop-filter: blur(10px);
+
+    color: #c6b4d0;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  // Estrellas
+
+  &--star {
+    position: absolute;
+    z-index: 4;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+    background: #e9c7ff;
+
+    box-shadow: 0 0 10px rgba(231, 188, 255, 0.7);
+
+    animation: hero-twinkle 3s ease-in-out infinite alternate;
+
+    &_one {
+      top: 19%;
+      left: 12%;
+    }
+
+    &_two {
+      top: 8%;
+      right: 12%;
+      width: 3px;
+      height: 3px;
+      animation-delay: 0.8s;
+    }
+
+    &_three {
+      bottom: 12%;
+      left: 22%;
+      width: 4px;
+      height: 4px;
+      animation-delay: 1.4s;
+    }
+
+    &_four {
+      top: 72%;
+      right: 10%;
+      width: 3px;
+      height: 3px;
+      animation-delay: 0.5s;
+    }
+  }
+
+  // ANIMACIONES
+
+  @keyframes hero-planet-float {
+    0%, 100% {
+      transform: translateY(-12px);
+    }
+
+    50% {
+      transform: translateY(12px);
+    }
+  }
+
+    @keyframes hero-ring-rotate {
+      from {
+        transform: translate(-50%, -50%) rotate(-15deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(345deg);
+      }
+    }
+
+  @keyframes hero-moon-orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes hero-label-float {
+    0%, 100% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(-12px);
+    }
+  }
+
+  @keyframes hero-glow {
+    from {
+      opacity: 0.7;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes hero-twinkle {
+    from {
+      opacity: 0.35;
+      transform: scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1.3);
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 40px 7% 20px;
+
+    &--content {
+      width: 100%;
+    }
+
+    &--visual {
+      min-height: 350px;
+      height: 350px;
+      margin-top: 5px;
+    }
+
+    &--planet {
+      width: 165px;
+    }
+
+    &--ring {
+      width: 265px;
+      height: 55px;
+      border-width: 7px;
+    }
+
+    &--orbit_one {
+      width: 300px;
+    }
+
+    &--orbit_two {
+      width: 330px;
+    }
+
+    &--orbit_three {
+      width: 355px;
+    }
+
+    &--orbit-label {
+      top: 5%;
+      right: 0;
+    }
+
+    &--universe-label {
+      bottom: 5%;
+      left: 0;
+    }
+
+    &--emphasis {
+      font-size: clamp(28px, 7vw, 38px);
+    }
+
+    .hero-identity-text {
+      max-width: 420px;
+      font-size: 11px;
+    }
+  }
+}
+
+//  preferencias de movimiento
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-section--planet,
+  .hero-section--ring,
+  .hero-section--orbit,
+  .hero-section--orbit-label,
+  .hero-section--glow,
+  .hero-section--star {
+    animation: none !important;
+  }
+}
+
+
+  
+
+// Responsive
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 40px 7% 20px;
+
+    &--content {
+      width: 100%;
+    }
+
+    &--visual {
+      height: 220px;
+      margin-top: 5px;
+    }
+
+    &--planet {
+      width: 135px;
+    }
+
+    &--ring {
+      width: 220px;
+      height: 42px;
+    }
+
+    &--emphasis {
+      font-size: clamp(28px, 7vw, 38px);
+    }
+
+    .hero-identity-text {
+      max-width: 420px;
+      font-size: 11px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-section--star {
+    animation: none;
+  }
+}

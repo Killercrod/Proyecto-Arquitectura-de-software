@@ -1,0 +1,37 @@
+// SearchBar.scss
+.search-bar {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	padding: 0.8rem 0.8rem 0.8rem 1.5rem;
+	background-color: var(--global-modalBackground);
+	border: 1px solid rgba(var(--color-accent-schedule-rgb), 0.2);
+	border-radius: 0.5rem;
+
+	&:focus-within { border-color: var(--global-primaryColor); }
+
+	&__icon {
+		flex-shrink: 0;
+		font-size: 1.4rem;
+		color: var(--color-accent-schedule);
+	}
+
+	&__input {
+		flex: 1;
+		min-width: 0;
+		height: 3rem;
+
+		font-family: var(--textFont_primary);
+		font-size: 1rem;
+		color: var(--global-WhiteColor);
+
+		background: transparent;
+		border: none;
+		outline: none;
+
+		&::placeholder { color: var(--color-accent-schedule); }
+	}
+
+	&__button { flex-shrink: 0; }
+}

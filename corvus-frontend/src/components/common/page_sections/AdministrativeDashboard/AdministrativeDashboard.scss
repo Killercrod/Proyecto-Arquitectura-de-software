@@ -1,0 +1,113 @@
+// corregir el scss (optimizar)
+
+.administrative-dashboard {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		'products events admins'
+		'controlCenter controlCenter controlCenter';
+	gap: 1rem;
+
+	// Para heredar: crea otra clase y redefine solo las áreas, por ejemplo
+	// .mi-dashboard { grid-template-areas: 'hero hero hero' 'products events admins'; }
+
+	&__products { grid-area: products; }
+	&__events { grid-area: events; }
+	&__admins { grid-area: admins; }
+
+	&__control-center {
+		grid-area: controlCenter;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 1rem;
+
+		padding: 4.5rem 4rem;
+		min-height: 20rem;
+
+		border: 1px solid rgba(var(--color-accent-schedule-rgb), 0.25);
+		border-radius: 0.75rem;
+		background:
+			radial-gradient(circle at 85% 20%, rgba(var(--global-SecondaryColor-rgb), 0.9), transparent 55%),
+			var(--global-tertiaryColor);
+	}
+
+	&__control-center-eyebrow {
+		margin: 0;
+		font-family: var(--textFont_primary);
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: var(--global-primaryColor);
+	}
+
+	&__control-center-title {
+		margin: 0;
+		font-family: var(--textFont_primary);
+		font-size: clamp(2rem, 4vw, 3.4rem);
+		font-weight: 400;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+		color: var(--global-WhiteColor);
+	}
+
+	&__control-center-text {
+		margin: 0;
+		max-width: 60ch;
+		font-family: var(--textFont_primary);
+		font-size: 0.95rem;
+		color: var(--color-accent-schedule);
+	}
+
+	&__control-center-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.75rem;
+	}
+
+	&__btn {
+		padding: 0.75rem 1.4rem;
+		border-radius: 999px;
+		font-family: var(--textFont_primary);
+		font-size: 0.75rem;
+		font-weight: 700;
+		cursor: pointer;
+		transition: opacity 0.2s ease, border-color 0.2s ease;
+
+		&:focus-visible {
+			outline: 2px solid var(--global-primaryColor);
+			outline-offset: 3px;
+		}
+
+		&--primary {
+			border: 1px solid transparent;
+			background-color: var(--color-accent-btn);
+			color: var(--global-SecondaryColor);
+
+			&:hover { opacity: 0.88; }
+		}
+
+		&--outline {
+			border: 1px solid rgba(var(--color-accent-schedule-rgb), 0.4);
+			background-color: transparent;
+			color: var(--global-WhiteColor);
+
+			&:hover { border-color: var(--global-primaryColor); }
+		}
+	}
+
+	@media (max-width: 900px) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'products'
+			'events'
+			'admins'
+			'hero';
+
+		&__hero { padding: 2.5rem 1.75rem; }
+	}
+}

@@ -1,0 +1,26 @@
+.administrative-events-section {
+    // overflow-y:scroll;
+    // height: 100%;
+
+    &_layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "events-form events-list";
+        gap: 4rem;
+
+        // height: 100dvh;
+
+    }
+
+    .events-form-grid {
+        grid-area: events-form;
+        // overflow-y:scroll;
+        // min-height: 0;
+
+        
+    }
+    .events-list-grid {
+        grid-area: events-list;
+        // overflow-y:scroll;
+    }
+}

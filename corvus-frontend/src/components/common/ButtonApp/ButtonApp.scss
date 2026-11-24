@@ -1,0 +1,67 @@
+.general-button_layout {
+    margin: 0;
+
+    padding: clamp(0.8rem, 1.5vw, 1.5rem) clamp(1rem, 1vw, 1.5rem);
+    border: 1px solid var(--global-primaryColor);
+    border-radius: 4rem;
+    background-color: transparent;
+
+    transition: all 0.5s ease;
+    
+}
+
+.general-button:hover {
+    cursor: pointer;
+    background-color: var(--color-accent-btn); 
+
+    .button-text{
+        color: var(--color-accent_alternative);
+    }
+
+    .button-icon {
+        color: var(--color-accent_alternative);
+    }
+
+
+    // animacion
+       
+}
+
+.general-button{
+    display: flex;
+    gap: clamp(0.6rem, 0.8vw, 1rem);
+    align-items: center;
+    font-weight: bold;
+
+    .button-text{
+        font-family: var(--textFont_primary);
+        font-size: clamp(1rem, 1vw, 1.8rem);
+        color: var(--global-primaryColor);
+        margin: 0;
+    }
+
+    .button-icon {
+        width: auto;
+        height: auto;
+        color: var(--global-primaryColor);
+
+        svg{
+            width: clamp(1rem, 2vw, 2rem);
+            height: auto;
+        }
+
+    }
+}
+
+
+
+// referencia props del icono
+// .icono-contenedor {
+//         width: auto;
+//         height: auto;
+
+//         svg {
+//             width: 4rem;
+//             height: auto;
+//         }
+//     }

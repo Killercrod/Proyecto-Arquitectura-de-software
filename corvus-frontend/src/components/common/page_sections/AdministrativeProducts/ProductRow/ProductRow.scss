@@ -1,0 +1,144 @@
+.product-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 10rem 10rem auto;
+	grid-template-areas: 'info price stock actions';
+	align-items: center;
+	column-gap: 2rem;
+
+	padding: 1.25rem 1.5rem;
+	list-style: none;
+	border-bottom: 1px solid rgba(var(--color-accent-schedule-rgb), 0.2);
+	transition: background-color 0.2s ease;
+
+	&:last-child { border-bottom: none; }
+
+	&:hover { background-color: rgba(var(--global-primaryColor-rgb), 0.05); }
+
+	&__info {
+		grid-area: info;
+		display: grid;
+		grid-template-columns: 4.5rem minmax(0, 1fr);
+		align-items: center;
+		column-gap: 1.5rem;
+	}
+
+	&__image {
+		width: 4.5rem;
+		height: 4.5rem;
+		object-fit: cover;
+		border-radius: 0.5rem;
+		background-color: var(--global-inputform-modal-background);
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		min-width: 0; // permite que la descripción se corte con "…"
+	}
+
+	&__name,
+	&__category,
+	&__description,
+	&__price,
+	&__stock {
+		margin: 0;
+		font-family: var(--textFont_primary);
+	}
+
+	&__name {
+		font-size: 1.05rem;
+		font-weight: 500;
+		color: var(--global-WhiteColor);
+	}
+
+	&__category {
+		font-size: 0.8rem;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--global-primaryColor);
+	}
+
+	&__description {
+		font-size: 0.8rem;
+		color: var(--color-accent-schedule);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__price {
+		grid-area: price;
+		font-size: 1rem;
+		color: var(--global-WhiteColor);
+	}
+
+	&__stock {
+		grid-area: stock;
+		font-size: 1rem;
+		color: var(--color-accent-schedule);
+	}
+
+	&__actions {
+		grid-area: actions;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		height: 3rem;
+		background-color: transparent;
+		font-family: var(--textFont_primary);
+		font-size: 0.85rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: background-color 0.2s ease, border-color 0.2s ease;
+
+		svg {
+			width: 1.25rem;
+			height: 1.25rem;
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--global-primaryColor);
+			outline-offset: 2px;
+		}
+
+		&--edit {
+			padding: 0 1.4rem;
+			border: 1px solid rgba(var(--color-accent-schedule-rgb), 0.4);
+			border-radius: 999px;
+			color: var(--color-accent);
+
+			&:hover {
+				border-color: var(--global-primaryColor);
+				background-color: rgba(var(--global-primaryColor-rgb), 0.1);
+			}
+		}
+
+		&--delete {
+			width: 3rem;
+			border: 1px solid rgba(224, 120, 140, 0.35);
+			border-radius: 50%;
+			color: #e0788c;
+
+			&:hover {
+				border-color: #e0788c;
+				background-color: rgba(224, 120, 140, 0.1);
+			}
+		}
+	}
+
+	@media (max-width: 700px) {
+		grid-template-columns: 1fr 1fr auto;
+		grid-template-areas:
+			'info info info'
+			'price stock actions';
+		row-gap: 1rem;
+	}
+}

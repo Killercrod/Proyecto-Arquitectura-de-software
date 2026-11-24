@@ -1,0 +1,28 @@
+.header-bar_layout {
+    margin: 0;
+    margin-bottom: 2rem;
+  max-width: 100%;
+//   margin: 2rem;
+  position: relative;
+}
+
+.header-bar-content {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header-bar{
+    // background-color: white;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        background-color: var(--global-WhiteColor);
+        height: clamp(0.02rem, 0.02vw, 0.05rem);
+        opacity: 0.2;
+        bottom: 0;
+
+    }
+}

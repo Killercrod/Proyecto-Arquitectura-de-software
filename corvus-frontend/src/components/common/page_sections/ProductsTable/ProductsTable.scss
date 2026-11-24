@@ -1,0 +1,47 @@
+// ProductsTable/ProductsTable.scss
+.products-table-container {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.products-table {
+	width: 100%;
+	border-collapse: collapse;
+
+	th, td {
+		padding: 0.75rem;
+		text-align: left;
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+	th { font-weight: 600; }
+
+	.product-thumb {
+		width: 48px;
+		height: 48px;
+		object-fit: cover;
+		border-radius: 6px;
+	}
+
+	.products-table-empty {
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.products-table-actions {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.btn-edit-product,
+	.btn-delete-product {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+		padding: 0.4rem 0.7rem;
+		cursor: pointer;
+	}
+
+	.btn-delete-product { color: #c62828; }
+}

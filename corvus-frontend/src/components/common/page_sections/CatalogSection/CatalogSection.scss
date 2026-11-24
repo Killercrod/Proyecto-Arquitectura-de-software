@@ -1,0 +1,26 @@
+// CatalogSection.scss
+.catalog-section {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	padding: clamp(4rem, 4vw, 8rem) clamp(1rem, 2.5vw, 4rem);
+
+	&__grid {
+        // width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+		gap: 3rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		transition: opacity 0.2s ease;
+
+		&--loading { opacity: 0.5; }
+	}
+
+	&__status {
+		margin: 0;
+		text-align: center;
+		color: var(--color-accent-schedule);
+	}
+}

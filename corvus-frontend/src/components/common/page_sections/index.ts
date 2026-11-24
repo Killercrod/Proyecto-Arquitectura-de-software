@@ -1,0 +1,12 @@
+// export * from './AdminProducts';
+export * from './FooterCatalog';
+export * from './CalendarSection';
+export * from './HeaderBar';
+export * from './HeroSection';
+export * from './SideBar';
+export * from './ProductsTable';
+export * from './AdministrativeShell';
+export * from './AdministrativeProducts';
+export * from './AdministrativeDashboard';
+export * from './AdministrativeEvents';
+export * from './AdministrativeUsers';

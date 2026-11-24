@@ -1,0 +1,12 @@
+.administrative-users {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 2rem;
+	align-items: start;
+
+	.size-adminUsers{
+		padding-top: 0;
+		// margin-top: 0;
+		font-size: clamp(2rem, 2vw, 3rem);
+	}
+}

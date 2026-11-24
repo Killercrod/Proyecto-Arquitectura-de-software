@@ -1,0 +1,3 @@
+borrar product-elements
+se refactorizó a Product (componente)
+para evitar prop drilling

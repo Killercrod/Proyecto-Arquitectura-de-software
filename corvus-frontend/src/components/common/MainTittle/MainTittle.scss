@@ -1,0 +1,20 @@
+.main-tittle_container {
+  margin: 0;
+
+}
+
+.main-tittle {
+    font-size: clamp(1.8rem, 2.5vw, 4rem);
+    .tittle{
+        margin: 0;
+        font-family: var(--tittleFont);
+        color: var(--global-WhiteColor);
+    }
+
+    .tittle-emphasize{
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 5rem);
+        font-family: var(--emphasisFont);
+        color: var(--color-accent);
+    }
+}
